@@ -1,0 +1,29 @@
+{
+  "name": "part4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "database": "npx json-server --watch ./data/database.json",
+    "serve": "npx es-dev-server --app-index index.html --node-resolve --watch -p 8080",
+    "css": "npx tailwindcss build ./styles/tailwind-import.css -o ./styles/tailwind.css",
+    "css:prod": "NODE_ENV=production npx tailwindcss build ./assets/styles/tailwind-import.css -o ./assets/styles/tailwind.css",
+    "build": "npx snowpack build index.html --optimize --clean --no-map"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "idb": "^5.0.2",
+    "lit-html": "^1.2.1",
+    "lit-icon": "^1.0.0",
+    "page": "^1.11.6",
+    "pell": "^1.0.6",
+    "web-modules": "^1.0.0"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "es-dev-server": "^1.48.1",
+    "json-server": "^0.16.1",
+    "tailwind": "^4.0.0"
+  }
+}
